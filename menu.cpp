@@ -14,19 +14,19 @@ int displayData(InfoAboutLand *land, int currentRecord) {
     }
 
     cout << "\t******************************************************************************" << endl;
-    cout << "\t|" << setiosflags(ios::left) << setw(6) << "№"
-         << "|" << setiosflags(ios::left) << setw(29) << "Кадастровый №"
-         << "|" << setiosflags(ios::left) << setw(16) << "Площадь"
-         << "|" << setiosflags(ios::left) << setw(36) << "Категория земли"
-         << "|" << setiosflags(ios::left) << setw(15) << "Кадастровая стоимость" << "|" << endl;
+    cout << "\t|" << left << setw(6) << "№"
+         << "|" << setw(29) << "Кадастровый №"
+         << "|" << setw(16) << "Площадь"
+         << "|" << setw(36) << "Категория земли"
+         << "|" << setw(15) << "Кадастровая стоимость" << "|" << endl;
 
     // Данные
     for (int i = 0; i < currentRecord; i++) {
-        cout << "\t|" << setiosflags(ios::left) << setw(4) << land[i].number
-             << "|" << setiosflags(ios::left) << setw(16) << land[i].cadastralNumber
-             << "|" << setiosflags(ios::left) << setw(9) << land[i].area
-             << "|" << setiosflags(ios::left) << setw(22) << land[i].categoryLand
-             << "|" << setiosflags(ios::left) << setw(21) << land[i].cadastralValue << "|" << endl;
+        cout << "\t|" << left << setw(4) << land[i].number
+             << "|" << setw(16) << land[i].cadastralNumber
+             << "|" << setw(9) << land[i].area
+             << "|" << setw(22) << land[i].categoryLand
+             << "|" << setw(21) << land[i].cadastralValue << "|" << endl;
     }
 
     cout << "\t******************************************************************************" << endl;
